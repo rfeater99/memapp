@@ -8,6 +8,10 @@
       <h2 class="subtitle">
         Nuxt.js project
       </h2>
+      <div class="block">
+        <h3>Nuxt.js + element-ui</h3>
+        <el-rate v-model="value" :colors="['#2F3D4D', '#64B486', '#4B7C6E']"></el-rate>
+      </div>
       <div class="links">
         <a href="test" target="_self" class="button--green">test</a>
       </div>
@@ -19,6 +23,11 @@
 import Logo from '~/components/Logo.vue'
 
 export default {
+  data () {
+    return {
+      value: null
+    }
+  },
   components: {
     Logo
   }
@@ -53,5 +62,9 @@ export default {
 
 .links {
   padding-top: 15px;
+}
+
+.block {
+  padding: 0 20px;
 }
 </style>
